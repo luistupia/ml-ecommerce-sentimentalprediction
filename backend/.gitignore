@@ -1,0 +1,57 @@
+# .gitignore para proyecto .NET + Angular
+
+# Visual Studio y Rider
+.vs/
+.idea/
+*.sln.docstates
+*.csproj.user
+*.user
+*.suo
+*.userosscache
+*.vcxproj.user
+*.iml
+
+# Archivos de compilación de .NET
+bin/
+obj/
+
+# Usuarios y logs
+*.log
+*.log.*
+*.pid
+
+# Scoped NuGet packages
+*.nupkg
+packages/
+
+# Caché de herramientas de NuGet
+.nuget/packages/
+
+# ASP.NET Scaffolding
+ScaffoldedFiles/
+
+# Configuraciones locales de IIS Express
+/.vs/
+
+# Node / Angular
+node_modules/
+dist/
+out-tsc/
+tmp/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Editor de código
+.vscode/
+
+# Variables de entorno
+.env
+.env.*
+
+# Archivos de índice de Visual Studio
+**/*.vsidx
+
+# Otros binarios temporales
+temp/

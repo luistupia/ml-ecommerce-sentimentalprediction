@@ -1,0 +1,25 @@
+<div class="reviews-container">
+  <div class="review-card mb-3" *ngFor="let review of reviews()">
+    <div class="card" [ngClass]="{'border-success': review.rating >= 4, 'border-danger': review.rating <= 2, 'border-warning': review.rating === 3}">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h5 class="card-title mb-0">{{review.userName}}</h5>
+          <div class="rating">
+            <span class="text-warning">★</span>
+            <span class="ms-1">{{review.rating}}/5</span>
+          </div>
+        </div>
+        <p class="card-text">{{review.comment}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">{{review.date | date:'dd/MM/yyyy'}}</small>
+          <div class="sentiment-badge" *ngIf="getSentiment(review.id)">
+            <span class="badge" [ngClass]="{'bg-success': isPositiveSentiment(getSentiment(review.id)), 'bg-danger': !isPositiveSentiment(getSentiment(review.id))}">
+              {{isPositiveSentiment(getSentiment(review.id)) ? 'Positivo' : 'Negativo'}}
+            </span>
+            <small class="ms-2 text-muted">({{getSentiment(review.id)?.probability | percent:'1.0-0'}})</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

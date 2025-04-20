@@ -1,0 +1,24 @@
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.rating {
+  font-size: 1.2rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #f8f9fa;
+}
+
+.icon-container i {
+  font-size: 5rem;
+  color: #0d6efd;
+}
